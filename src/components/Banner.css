@@ -1,0 +1,39 @@
+/* Banner principal */
+.banner-principal {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 10px #00000055;
+}
+/* Iamgen fondo */
+.img-banner {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.6); /* Oscurecer imagen */
+}
+/* Tiulo - parrafo (banner) */
+.texto-banner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.texto-banner h1 {
+    font-size: 2.8em;
+    color: #00ffe7;
+    text-shadow: 2px 2px 6px #000;
+}
+
+.texto-banner p {
+    font-size: 1.2em;
+    color: #ffffff;
+    margin-top: 10px;
+    text-shadow: 1px 1px 4px #000;
+}
