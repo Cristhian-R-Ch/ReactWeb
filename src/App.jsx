@@ -6,6 +6,7 @@ import SelectorPersonaje from './components/SelectorPersonaje';
 import Ofertas from './components/Ofertas';
 import Catalogo from './components/Catalogo';
 import ModalCarrito from "./components/ModalCarrito";
+import Footer from './components/Footer/Footer';
 
 function App(){
   // Hooks
@@ -45,6 +46,8 @@ function App(){
     <Ofertas/>
 
     <Catalogo/>
+    
+    <Footer />
 
     {modalCarritoVisible && (
       <ModalCarrito onClose={cerrarCarrito} />
