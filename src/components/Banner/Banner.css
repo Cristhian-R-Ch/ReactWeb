@@ -2,9 +2,9 @@
 .banner-principal {
     position: relative;
     width: 100%;
-    height: 300px;
+    height: 250px;
     overflow: hidden;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     box-shadow: 0 4px 10px #00000055;
 }
 /* Iamgen fondo */
@@ -17,7 +17,7 @@
 /* Tiulo - parrafo (banner) */
 .texto-banner {
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: #ffffff;
@@ -34,6 +34,6 @@
 .texto-banner p {
     font-size: 1.2em;
     color: #ffffff;
-    margin-top: 10px;
+    margin-top: 0px;
     text-shadow: 1px 1px 4px #000;
 }

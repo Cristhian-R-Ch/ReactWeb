@@ -1,7 +1,7 @@
 import React from 'react';
 import './Header.css';
 
-function Header({ onAvatarClick, usuario, onLogout}) {
+function Header({ onAvatarClick, usuario, onLogout, onCarritoClick}) {
     return (
     <header className='header-principal'>
         <div className='logo-area'>
@@ -23,6 +23,11 @@ function Header({ onAvatarClick, usuario, onLogout}) {
                 <option value='en'>English</option>
                 <option value='pr'>Portugués</option>
             </select>
+            
+            {/* icono de carrito */}
+            <div className='carrito-icono' onClick={onCarritoClick} title="Ver carrito">
+                <i className="fa-solid fa-cart-shopping"></i>
+            </div>
 
             {/* Usuario */}
             <div className='user-avatar' onClick={onAvatarClick}>

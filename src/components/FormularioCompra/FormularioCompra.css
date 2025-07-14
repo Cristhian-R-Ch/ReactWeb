@@ -1,0 +1,57 @@
+.formulario-compra {
+  background-color: #103f48;
+  padding: 20px;
+  border-radius: 12px;
+  color: white;
+  text-align: left;
+}
+
+.formulario-compra input,
+.formulario-compra select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.input-error {
+  border: 2px solid #ff5050;
+  background-color: #ffe6e6;
+}
+
+.error {
+  color: #ffaaaa;
+  margin-top: -8px;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+}
+
+.formulario-botones {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.btn-confirmar,
+.btn-volver {
+  flex: 1;
+  padding: 10px;
+  background-color: #00b3a6;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-volver {
+  background-color: #555;
+}
+
+.btn-confirmar:hover,
+.btn-volver:hover {
+  background-color: #009e94;
+}

@@ -1,0 +1,95 @@
+.modal-carrito-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-carrito {
+  background-color: #103f48;
+  padding: 20px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 480px;
+  color: white;
+  box-shadow: 0 4px 10px #000000aa;
+  position: relative;
+}
+
+.lista-carrito {
+  list-style: none;
+  max-height: 300px;
+  overflow-y: auto;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+.item-carrito {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.item-carrito img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-right: 15px;
+  border-radius: 6px;
+  background-color: #0a2e36;
+}
+
+.detalle-item h4 {
+  margin: 0;
+}
+
+.btn-eliminar {
+  margin-left: auto;
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  color: #ff4d4d;
+  cursor: pointer;
+}
+
+.total-carrito {
+  margin-bottom: 20px;
+  font-size: 18px;
+  text-align: right;
+}
+
+.acciones-carrito {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-vaciar,
+.btn-finalizar,
+.btn-cerrar {
+  background-color: #0a2e36;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-vaciar:hover {
+  background-color: #00b3a6;
+}
+
+.btn-finalizar:hover {
+  background-color: #00b3a6;
+}
+
+.btn-cerrar {
+  margin-top: 15px;
+  width: 100%;
+}

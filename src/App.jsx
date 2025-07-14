@@ -5,19 +5,23 @@ import Banner from './components/Banner';
 import SelectorPersonaje from './components/SelectorPersonaje';
 import Ofertas from './components/Ofertas';
 import Catalogo from './components/Catalogo';
-import Carrito from './components/Carrito';
-import FormularioCompra from './components/FormularioCompra';
+import ModalCarrito from "./components/ModalCarrito";
 
 function App(){
   // Hooks
   const [modalVisible, setModalVisible] = useState(false);
   const [usuario, setUsuario] = useState("");
-  
+  const [modalCarritoVisible, setModalCarritoVisible] = useState(false);
+
   // Funciones
   const mostrarLogin = () => setModalVisible(true);
   const cerrarLogin = () => setModalVisible(false);
-  const procesarLogin = (nombreusuario) => setUsuario(nombreusuario);
+  
+  const procesarLogin = (nombreUsuario) => {setUsuario(nombreUsuario); cerrarLogin();}; //nuevo cerrar login
   const cerrarSesion = () => setUsuario("");
+
+  const mostrarCarrito = () => setModalCarritoVisible(true);
+  const cerrarCarrito = () => setModalCarritoVisible(false);
 
   // Return
   return (
@@ -26,6 +30,7 @@ function App(){
       onAvatarClick={mostrarLogin} 
       usuario={usuario}
       onLogout={cerrarSesion}
+      onCarritoClick={mostrarCarrito}
     />
   
     <LoginModal
@@ -33,20 +38,17 @@ function App(){
       onClose={cerrarLogin}
       onLogin={procesarLogin}
     />
-
     <Banner/>
-    
-    <main>
-      <h1> Tienda Web React</h1>
-      <p>Bienvenido a la tienda</p>
-    </main>
 
-    {/* Componentes extras */}
-    <SelectorPersonaje/>
+    <SelectorPersonaje usuario={usuario}/> 
+
     <Ofertas/>
+
     <Catalogo/>
-    <Carrito/>
-    <FormularioCompra/>
+
+    {modalCarritoVisible && (
+      <ModalCarrito onClose={cerrarCarrito} />
+    )}
     </>
   );
 }

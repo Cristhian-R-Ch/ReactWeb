@@ -1,0 +1,75 @@
+.selector-personaje {
+  margin: 0 auto 20px auto;
+  padding: 20px;
+  background-color: #103f48;
+  border-radius: 12px;
+  color: #ffffff;
+  box-shadow: 0 4px 10px #00000055;
+  text-align: center;
+} 
+
+/* Desplegable centrado */
+option {
+   text-align: center;
+}
+
+.selector-personaje h3 {
+  color: #00ffe7;
+  margin-bottom: 5px;
+}
+
+.form-seleccion {
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.form-seleccion label {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 4px;
+  text-align: left;
+}
+
+.form-seleccion select {
+  width: 100%;
+  padding: 6px;
+  border-radius: 6px;
+  border: none;
+  font-weight: bold;
+}
+
+.form-seleccion button {
+  margin-top: 15px;
+  background-color: #00ffe7;
+  color: #000000;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.form-seleccion button:hover {
+  background-color: #00b3a6;
+}
+
+.resumen p {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.resumen button {
+  background-color: #00ffe7;
+  color: #000;
+  font-weight: bold;
+  padding: 6px 14px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.resumen button:hover {
+  background-color: #00b3a6;
+}

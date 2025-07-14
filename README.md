@@ -1,12 +1,38 @@
-# React + Vite
+# Simulación de Tienda Online para Videojuego
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto es una "simulación de una tienda online" de un videojuego. 
+Permite a los usuarios: 
+- Iniciar sesión de forma ficticia
+- Seleccionar un personaje y servidor
+- Explorar y filtrar productos del catálogo
+- Agregar ítems al carrito de compras
+- Finalizar una compra simulada a través de un formulario con validaciones
 
-Currently, two official plugins are available:
+Fue desarrollado usando **React** y **Vite**, como una adaptación de lo originalmente creado solo con **HTML**, **CSS** y **JavaScript**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tecnologías utilizadas
 
-## Expanding the ESLint configuration
+- [React.js](https://es.react.dev/)
+- [Vite](https://vitejs.dev/)
+- CSS - Por componente
+- [Font Awesome](https://fontawesome.com/) - Para iconografía
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Funcionalidades principales
+
+- Modal de inicio de sesión (sin backend / sin autentificación real)
+- Selector de personaje y servidor
+- Catálogo de productos con filtrado por tipo y orden por precio
+- Carrito de compras interactivo (añadir, eliminar, vaciar)
+- Formulario de compra con validaciones
+- Modal de detalle del producto
+- Estado manejado con useState y useContext
+
+## Referencias y recursos utilizados
+
+- [React - Documentación oficial](https://es.react.dev/learn)
+- [React - Context](https://es.react.dev/learn/passing-data-deeply-with-context)
+- [React - useState](https://es.react.dev/reference/react/useState)
+- [MDN Web Docs - Flexbox](https://developer.mozilla.org/es/docs/Web/CSS/flex)
+- [MDN Web Docs - CSS](https://developer.mozilla.org/es/docs/Web/CSS)
+- [FontAwesome](https://fontawesome.com/)
+- [YouTube - Curso práctico de React](https://www.youtube.com/watch?v=PWF5SgnNdp4&list=PL99i9HENlj5yNCaKp2uxI_3g-CJn1iVOa&index=17)
