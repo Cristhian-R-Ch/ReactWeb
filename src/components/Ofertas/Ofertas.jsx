@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Ofertas.css";
-
+// Arreglo de productos en oferta con id, nombre, precio e imagen
 const productosEnOferta = [
   {
     id: 1,
@@ -41,21 +41,23 @@ const productosEnOferta = [
 ];
 
 function Ofertas() {
+  // Estado que controla el indice de inicio en la lista de productos visibles
   const [indiceInicio, setIndiceInicio] = useState(0);
+  // Cantidad de productos visibles a la vez
   const elementosVisibles = 3;
-
+  // Funcion para avanzar 
   const avanzar = () => {
     if (indiceInicio + elementosVisibles < productosEnOferta.length) {
       setIndiceInicio(indiceInicio + 1);
     }
   };
-
+  // Funcion para retroceder 
   const retroceder = () => {
     if (indiceInicio > 0) {
       setIndiceInicio(indiceInicio - 1);
     }
   };
-
+  // Producots que se muestran actualmente en la seccion de ofertas
   const ofertasVisibles = productosEnOferta.slice(
     indiceInicio,
     indiceInicio + elementosVisibles

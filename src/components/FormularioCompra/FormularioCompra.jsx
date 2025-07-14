@@ -2,12 +2,13 @@ import React, { useState } from 'react';
 import './FormularioCompra.css';
 
 function FormularioCompra({ onVolver, onCompraExitosa }) {
+  // Estados para los campos del formulario y guardar errores de validacion
   const [nombre, setNombre] = useState('');
   const [correo, setCorreo] = useState('');
   const [personaje, setPersonaje] = useState('');
   const [metodoPago, setMetodoPago] = useState('');
   const [errores, setErrores] = useState({});
-
+  // Funcion para validar campos del formulario y devuelve errores detectados
   const validarFormulario = () => {
     const nuevosErrores = {};
 
@@ -22,14 +23,16 @@ function FormularioCompra({ onVolver, onCompraExitosa }) {
 
     return nuevosErrores;
   };
-
+  // Envio del formulario
   const handleSubmit = (e) => {
     e.preventDefault();
     const erroresDetectados = validarFormulario();
 
     if (Object.keys(erroresDetectados).length > 0) {
+      // Si hay errores los guarda en el estado
       setErrores(erroresDetectados);
     } else {
+      // Si no hay errores, limpia los errores y ejecuta la funcion   de exito
       setErrores({});
       onCompraExitosa(); // Simula éxito
     }

@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import "./SelectorPersonaje.css";
 
 function SelectorPersonaje({ usuario }) {
-  // Estados
+  // Estados locales para almacenar la seleccion del servidor y personaje
   const [servidor, setServidor] = useState("");
   const [personaje, setPersonaje] = useState("");
   const [mostrarResumen, setMostrarResumen] = useState(false);
 
-  // Confirmación
+  // Confirmación que el usuario este logeuado y con campos seleccionados
   const confirmarSeleccion = () => {
     if (!usuario) {
         alert("! Debes iniciar sesión antes de seleccionar un personaje.");
@@ -18,11 +18,11 @@ function SelectorPersonaje({ usuario }) {
       alert("! Por favor, selecciona un servidor y un personaje.");
       return;
     }
-
+    // Con validaciones correctas, se muestra resumen de la seleccion
     setMostrarResumen(true);
   };
 
-  // Formulario
+  // Funcion para reiniciar la seleccion y permitir modificacion
   const cambiarSeleccion = () => {
     setMostrarResumen(false);
     setServidor("");

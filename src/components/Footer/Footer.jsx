@@ -1,6 +1,6 @@
 import React from 'react';
 import './Footer.css';
-
+// Seccion fija para el pie de pagina con enlaces a soporte, preguntas, politica y redes sociales
 function Footer() {
   return (
     <footer className="footer">

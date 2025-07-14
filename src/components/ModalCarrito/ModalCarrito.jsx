@@ -4,11 +4,13 @@ import { useCarrito } from "../../context/CarritoContext";
 import FormularioCompra from "../FormularioCompra";
 
 function ModalCarrito({ onClose }) {
+  // Obtiene el contexto de las funciones y el estado del carrito
   const { carrito, eliminarDelCarrito, vaciarCarrito } = useCarrito();
+  // Estado local para mostrar u ocultar el formulario de compra
   const [mostrarFormulario, setMostrarFormulario] = useState(false);
-
+  // Calculo del total acumulado de los precios de los productos
   const total = carrito.reduce((acc, producto) => acc + producto.precio, 0);
-
+  // Funcion que se ejecuta cuando la compra se realiza
   const manejarCompraExitosa = () => {
     vaciarCarrito();
     setMostrarFormulario(false);

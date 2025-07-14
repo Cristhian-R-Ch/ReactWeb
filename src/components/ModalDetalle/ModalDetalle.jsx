@@ -3,6 +3,7 @@ import "./ModalDetalle.css";
 
 function ModalDetalle({ producto, onClose }) {
   return (
+    // Fondo  oscuro semitransparente, al hacer click en el fondo se cierra el modal llamando al onClose
     <div className="modal-backdrop" onClick={onClose}>
       <div
         className="modal-detalle"

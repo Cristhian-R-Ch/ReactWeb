@@ -1,6 +1,6 @@
 import React from 'react';
 import './Header.css';
-
+// Header => Logo , selector de idioma , carrito y estado de Usuario
 function Header({ onAvatarClick, usuario, onLogout, onCarritoClick}) {
     return (
     <header className='header-principal'>

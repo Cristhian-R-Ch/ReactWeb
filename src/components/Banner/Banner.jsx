@@ -1,6 +1,6 @@
 import React from "react";
 import './Banner.css'
-
+// Banner: Imagen y texto de bienvenida
 function Banner() {
     return (
         <section className="banner-principal">

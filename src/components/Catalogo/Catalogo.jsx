@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import "./Catalogo.css";
 import { useCarrito } from "../../context/CarritoContext";
 import ModalDetalle from "../ModalDetalle";
-
+// Catalogo de productos disponibles en la tienda
 const productos =[
+    // Cada producto tiene id, nombre, descripcion breve, detalle completo,
+    // tipo de filtro, precio e imagen
     {
         id: 1,
         nombre: "Pack de 1000 monedas",
@@ -88,10 +90,12 @@ const productos =[
 ];
 
 function Catalogo() {
+    // Hook para agregar producto al carrito
     const { agregarAlCarrito } = useCarrito();
+    // Estados para filtro por tipo de producto y orden por precio
     const [filtroTipo, setFiltroTipo] = useState("todo");
     const [ordenPrecio, setOrdenPrecio] = useState("asc");
-    
+    // Filtrar y ordenar productos segun la seleccion
     const productosFiltrados = productos
         .filter((producto) =>
             filtroTipo === "todo" ? true : producto.tipo === filtroTipo
@@ -99,7 +103,7 @@ function Catalogo() {
         .sort((a, b) =>
             ordenPrecio === "asc" ? a.precio - b.precio : b.precio - a.precio
         );
-
+    // Estado para seleccionar y mostrar el detalle en modal   
     const [productoDetalle, setProductoDetalle] = useState(null);
 
     return (
